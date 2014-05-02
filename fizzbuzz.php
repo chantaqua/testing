@@ -6,26 +6,33 @@
  * Time: 8:02 PM
  */
 
-function fizzbuzz($number){
-    for($i=1;$i <= $number;$i++){
-        printNumber($i);
-        fizz($i);
-        buzz($i);
+function fizzbuzz($number)
+{
+    for ($i = 1; $i <= $number; $i++) {
+        printNumberIfNotFizzOrBuzz($i);
+        printFizzWhenDivisibleByThree($i);
+        printBuzzWhenDivisibleByFive($i);
         print "\n";
     }
 }
-function printNumber($number){
-    if($number%3!=0 && $number%5!=0){
+
+function printNumberIfNotFizzOrBuzz($number)
+{
+    if ($number % 3 != 0 && $number % 5 != 0) {
         print $number;
     }
 }
-function fizz($number){
-    if($number%3==0){
+
+function printFizzWhenDivisibleByThree($number)
+{
+    if ($number % 3 == 0) {
         print "Fizz";
     }
 }
-function buzz($number){
-    if($number%5==0){
+
+function printBuzzWhenDivisibleByFive($number)
+{
+    if ($number % 5 == 0) {
         print "Buzz";
     }
 }
